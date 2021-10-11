@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LogItem from "./LogItem";
+import PreLaoder from "../../PreLoader";
 
 const Logs = () => {
   const [logs, setLogs] = useState([]);
@@ -9,13 +10,15 @@ const Logs = () => {
     const res = await fetch("/logs");
     const data = await res.json();
     setLogs(data);
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   };
   useEffect(() => {
     getLogs();
   }, []);
   if (loading) {
-    return <h3>Loading...</h3>;
+    return <PreLaoder />;
   }
   return (
     <ul className="collection with-header">
@@ -25,7 +28,7 @@ const Logs = () => {
       {!loading && logs.length === 0 ? (
         <p className="center">No log to show...</p>
       ) : (
-        logs.map((log) => <LogItem log={log} key={log.id} />)
+        logs.map((log) => <LogItem log={log} />)
       )}
     </ul>
   );
