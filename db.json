@@ -11,16 +11,16 @@
       "id": 2,
       "message": "Fixed hard drive on workstation 002",
       "attention": false,
-      "tech": "John Doe",
-      "date": "2019-05-31T16:18:04.245Z"
+      "tech": "Sam Smilga",
+      "date": "2021-11-27T11:55:31.982Z"
     },
     {
-      "message": "1122 wireless down",
-      "attention": true,
-      "tech": "Sara Wilson",
-      "date": "2019-05-31T15:46:48.690Z",
-      "id": 3
-    }   
+      "id": 3,
+      "message": "Fixed Water",
+      "attention": false,
+      "tech": "John Doe",
+      "date": "2021-11-27T11:55:25.847Z"
+    }
   ],
   "techs": [
     {
